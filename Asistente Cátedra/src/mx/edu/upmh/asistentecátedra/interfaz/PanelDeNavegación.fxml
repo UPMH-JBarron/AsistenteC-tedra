@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.upmh.asistentecátedra.interfaz.navegación.PanelDeNavegación">
+   <children>
+      <Button fx:id="btnInicio" contentDisplay="TOP" mnemonicParsing="false" text="Inicio" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image  url="@../../../../../../Recursos/Imágenes/Inicio.png"/>
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ToolBar fx:id="panelRuta" />
+   </children>
+</HBox>
