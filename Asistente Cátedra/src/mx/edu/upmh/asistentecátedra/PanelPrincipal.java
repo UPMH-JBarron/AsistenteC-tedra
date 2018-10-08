@@ -3,20 +3,24 @@
  */
 package mx.edu.upmh.asistentecátedra;
 
+
 import javafx.scene.layout.BorderPane;
 
 
 /**
- * @author jbarron
+ * @author Javier Elias Barrón López <jbarron@upmh.edu.mx>
  *
  */
-public class PanelPrincipal extends BorderPane{
+public class PanelPrincipal {
 	/*----------------------------------------------------------------
 	 * ATRIBUTOS
 	 * ---------------------------------------------------------------*/
+	
+	
 	/*----------------------------------------------------------------
 	 * CONSTRUCTORES
 	 * ---------------------------------------------------------------*/
+	
 	/*----------------------------------------------------------------
 	 * MÉTODOS
 	 * ---------------------------------------------------------------*/

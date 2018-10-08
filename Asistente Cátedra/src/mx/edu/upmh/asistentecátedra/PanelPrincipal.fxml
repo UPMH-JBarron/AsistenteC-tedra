@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane minHeight="200.0" minWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.upmh.asistentecátedra.PanelPrincipal">
+   <bottom>
+      <Label text="Panel Principal" BorderPane.alignment="CENTER" />
+   </bottom>
+	<stylesheets>
+		<URL value="@/mx/edu/upmh/asistentecátedra/interfaz/Interfaz.css"/>
+	</stylesheets>   
+</BorderPane>

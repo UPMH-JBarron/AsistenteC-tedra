@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+   <children>
+      <WebView prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label prefWidth="300.0" text="Es responsabilidad del usuario verificar que los datos sean correctos." textAlignment="CENTER" wrapText="true" />
+            <ComboBox prefWidth="300.0" />
+            <ToggleButtonGroup selectionType="SINGLE">
+                <toggles>
+                    <ToggleButton selected="true" text="Primer corte" />
+                    <ToggleButton text="Segundo corte" />
+                    <ToggleButton text="Tercer corte" />
+                </toggles>
+            </ToggleButtonGroup>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                  <TableColumn prefWidth="75.0" text="Estado" />
+                <TableColumn prefWidth="75.0" text="Matricula" />
+                <TableColumn prefWidth="75.0" text="Nombre" />
+                  <TableColumn prefWidth="75.0" text="Inasistencias" />
+                  <TableColumn prefWidth="75.0" text="Calificacion" />
+              </columns>
+            </TableView>
+            <Label fx:id="lblMensaje" text="Mensaje" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

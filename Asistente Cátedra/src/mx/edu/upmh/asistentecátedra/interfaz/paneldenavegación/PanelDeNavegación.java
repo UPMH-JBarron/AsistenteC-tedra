@@ -1,7 +1,7 @@
 /**
  * 
  */
-package mx.edu.upmh.asistentecátedra.interfaz.barradenavegación;
+package mx.edu.upmh.asistentecátedra.interfaz.paneldenavegación;
 
 
 import javafx.scene.control.Button;
