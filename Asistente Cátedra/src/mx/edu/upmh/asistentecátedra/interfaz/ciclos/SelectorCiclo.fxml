@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<fx:root alignment="CENTER" styleClass="selectorCiclo" type="HBox" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="lblAño" text="1999" styleClass="lblAno" />
+      <HBox fx:id="panelPeriodos" />
+   </children>
+</fx:root>

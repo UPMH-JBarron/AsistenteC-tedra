@@ -4,7 +4,8 @@
 package mx.edu.upmh.asistentecátedra;
 
 
-import javafx.scene.layout.BorderPane;
+import javafx.fxml.FXML;
+import mx.edu.upmh.asistentecátedra.interfaz.paneldenavegación.PanelDeNavegación;
 
 
 /**
@@ -15,7 +16,7 @@ public class PanelPrincipal {
 	/*----------------------------------------------------------------
 	 * ATRIBUTOS
 	 * ---------------------------------------------------------------*/
-	
+	@FXML private PanelDeNavegación panelDeNavegaciónController;
 	
 	/*----------------------------------------------------------------
 	 * CONSTRUCTORES
@@ -24,4 +25,9 @@ public class PanelPrincipal {
 	/*----------------------------------------------------------------
 	 * MÉTODOS
 	 * ---------------------------------------------------------------*/
+	@FXML
+	public void initialize( ) {
+		System.out.println( "PanelPrincipal cargado" );
+	}
+		
 }

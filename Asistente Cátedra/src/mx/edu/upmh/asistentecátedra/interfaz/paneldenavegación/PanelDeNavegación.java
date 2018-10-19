@@ -4,10 +4,11 @@
 package mx.edu.upmh.asistentecátedra.interfaz.paneldenavegación;
 
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToolBar;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import mx.edu.upmh.asistentecátedra.modelo.Ciclo;
 
 
@@ -15,12 +16,14 @@ import mx.edu.upmh.asistentecátedra.modelo.Ciclo;
  * @author jbarron
  *
  */
-public class PanelDeNavegación extends ToolBar {
+public class PanelDeNavegación {
 	/*----------------------------------------------------------------
 	* ATRIBUTOS
 	* ---------------------------------------------------------------*/
 	private Object objDestino;
-	private Button btnInicio;
+	
+	@FXML private Button btnInicio;
+	@FXML private ToolBar panelRuta;
 	
 	/*----------------------------------------------------------------
 	 * CONSTRUCTORES
@@ -35,24 +38,38 @@ public class PanelDeNavegación extends ToolBar {
 	 * ---------------------------------------------------------------*/
 	
 	
-	private void construirRuta( Object objDestino ) {
-		if( objDestino == null ) {
+	private void construirRuta( ) {
+		if( this.objDestino == null ) {
 			return;
 		}
-		if( Ciclo.class.isAssignableFrom(objDestino.getClass()) ) {
+		if( Ciclo.class.isAssignableFrom(this.objDestino.getClass()) ) {
 			// TODO Mostrar información del ciclo
+			Node nodoDestino = new Button( this.objDestino.toString() );
+			nodoDestino.getStyleClass().add("NodoRuta");
+			this.panelRuta.getItems().add( nodoDestino );
+			
 		}
 		
 	}
+	@FXML
+	private void irInicio( ActionEvent e ) {
+		System.out.println("Ir al inicio");
+	}
+	
+	
 	/**
 	 * Reconfigura la barra de navegación para mostrar el destino hacia el objeto indicado.
 	 * @param objDestino Objeto de información al que se desea mostrar la ruta.
 	 */
+	
 	public void setDestino( Object objDestino ) {
 		this.objDestino = objDestino;
-		this.getItems().clear();
-		this.construirRuta( objDestino );
+		this.construirRuta( );
 	}
+	
+	
+	
+	
 	
 	
 }

@@ -1,15 +1,109 @@
 /*--------------------------------------------------------------
 SELECTORES DE TIPO
 ----------------------------------------------------------------*/
-*,.root{
+.root{
 	-fx-background-color:	#515E6D;
 	-fx-color:				#F9F9F9;
+}
+
+.button, .toggle-button{
+	-fx-background-color:	transparent;
+	-fx-text-fill:			white; 
+}
+
+.toggle-button{
+	-fx-border-width: 	0px;
+}
+
+.button:hover, .toggle-button:hover{
+	-fx-border-color: #CDB936;
+	-fx-border-style:	solid;
+	-fx-border-width: 2px;	
+}
+
+.button:pressed{
+	-fx-border-color: #847826;
+}
+
+.toggle-button:selected{
+	-fx-border-style: solid;
+	-fx-border-width: 	2px;
+	
 }
 
 /*--------------------------------------------------------------
 SELECTORES DE CLASE
 ----------------------------------------------------------------*/
+.panelLateral{
+	-fx-background-color: #6B737F;
+}
+
+.accion{
+	-fx-text-fill:		#CDB936;
+	-fx-border-color: #CDB936;
+}
+
+.agregar{
+	-fx-graphic: 	url(./recursos/Icono_Agregar.png);
+}
+
+.opcion{
+	-fx-text-fill:		whitesmoke ;
+	-fx-border-color: 	whitesmoke ;
+}
+
+.selectorCiclo{
+	-fx-font:			24px "Sans";
+	-fx-font-weight:	bolder;
+	-fx-text-fill:		#B0C4D3;
+}
+.selectorCiclo> .lblAno{
+	-fx-padding:	10px 20px 10px 10px;
+	-fx-text-fill:	#B0C4D3;
+}
+
+.selectorCiclo  #panelPeriodos>.button{
+	-fx-min-width:		200px;
+	-fx-min-height:		100px;
+	-fx-padding:		20px;
+	
+	-fx-text-fill:			#F9F9F9;
+	-fx-background-color:	#5A404F;
+	-fx-border-radius:		0px;
+	
+	-fx-font:			18px "Sans";
+}
+
+
+
 
 /*--------------------------------------------------------------
 SELECTORES DE ID
 ----------------------------------------------------------------*/
+
+
+#panelDeNavegacion{
+	-fx-background-color:	#3E4958;
+	-fx-padding: 0 0 10px 15px;
+}
+
+#btnInicio{
+	-fx-background-color:	whitesmoke ;
+	-fx-text-fill:			#3E4958;
+	-fx-background-radius:  50%;
+	-fx-border-radius: 	 50%;
+	-fx-min-height:			60px;
+	-fx-padding: 	10px;
+	
+	-fx-graphic: 	url(./recursos/Inicio.png);
+}
+
+#panelRuta{
+	-fx-background-color:	transparent ;
+}
+
+#panelRuta  .NodoRuta{
+	-fx-graphic-text-gap: 	15px;
+	-fx-graphic: 	url(./recursos/Separador.png);
+	-fx-font-size:	16px;
+}

@@ -5,16 +5,15 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox alignment="CENTER" prefHeight="150.0" prefWidth="220.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<VBox alignment="CENTER" prefHeight="150.0" prefWidth="220.0" styleClass=".MiniaturaCurso" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="Nombre del Curso" />
-      <Label text="Grupo" />
+      <Label fx:id="lblNombre" text="Nombre del Curso" />
+      <Label fx:id="lblGrupo" text="Grupo" />
       <FlowPane fx:id="panelInfoExtra" alignment="CENTER" columnHalignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Listas" />
-            <Button mnemonicParsing="false" text="Actividades" />
-            <Button mnemonicParsing="false" text="Correo" />
+            <Button fx:id="btnListas" mnemonicParsing="false" text="Listas" />
+            <Button fx:id="btnActividades" mnemonicParsing="false" text="Actividades" />
+            <Button fx:id="btnCorreo" mnemonicParsing="false" text="Correo" />
          </children>
       </FlowPane>
    </children>

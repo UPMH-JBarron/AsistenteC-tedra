@@ -11,7 +11,7 @@
 <?import javafx.scene.web.WebView?>
 
 
-<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx">
    <children>
       <WebView prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
       <VBox alignment="TOP_CENTER">

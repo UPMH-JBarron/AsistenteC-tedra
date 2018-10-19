@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <VBox fx:id="panelOpciones" alignment="TOP_CENTER" minWidth="50.0" BorderPane.alignment="TOP_LEFT">
          <children>
@@ -32,7 +32,8 @@
          <children>
             <Button ellipsisString="+" mnemonicParsing="false" text="Nuevo Alumno" textAlignment="RIGHT" />
             <Button ellipsisString="+" mnemonicParsing="false" text="Nueva Sesion" textAlignment="CENTER" />
-            <Separator prefWidth="200.0" />
+            <Button ellipsisString="+" mnemonicParsing="false" text="Nueva Actividad" textAlignment="CENTER" />
+            <Separator />
             <Button ellipsisString="C" mnemonicParsing="false" text="Cortes" textAlignment="CENTER" />
             <Button ellipsisString="\@" mnemonicParsing="false" text="Enviar Correo" textAlignment="RIGHT" />
          </children>
@@ -53,20 +54,23 @@
                      <columns>
                         <TableColumn minWidth="200.0" prefWidth="200.0" text="PrimerCorte">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="1 / Diciembre" />
-                              <TableColumn prefWidth="75.0" text="2 / Diciembre" />
+                              <TableColumn prefWidth="75.0" text="Asistencias" />
+                              <TableColumn prefWidth="75.0" text="Actividades" />
+                              <TableColumn prefWidth="75.0" text="Calificaciones" />
                            </columns>
                         </TableColumn>
                         <TableColumn minWidth="200.0" prefWidth="200.0" text="Segundo Corte">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="1 / Diciembre" />
-                              <TableColumn prefWidth="75.0" text="2 / Diciembre" />
+                              <TableColumn prefWidth="75.0" text="Asistencias" />
+                              <TableColumn prefWidth="75.0" text="Actividades" />
+                              <TableColumn prefWidth="75.0" text="Calificaciones" />
                            </columns>
                         </TableColumn>
                         <TableColumn minWidth="200.0" prefWidth="200.0" text="Tercer Corte">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="1 / Diciembre" />
-                              <TableColumn prefWidth="75.0" text="2 / Diciembre" />
+                              <TableColumn prefWidth="75.0" text="Asistencias" />
+                              <TableColumn prefWidth="75.0" text="Actividades" />
+                              <TableColumn prefWidth="75.0" text="Calificaciones" />
                            </columns>
                         </TableColumn>
                         <TableColumn prefWidth="75.0" text="Final" />

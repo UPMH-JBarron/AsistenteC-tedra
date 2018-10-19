@@ -5,15 +5,14 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<BorderPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <FlowPane fx:id="panelCursos" minHeight="64.0" minWidth="64.0" BorderPane.alignment="CENTER" />
    </center>
    <right>
-      <VBox BorderPane.alignment="CENTER">
+      <VBox styleClass="panelLateral" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnNuevoCurso" mnemonicParsing="false" text="+" />
+            <Button fx:id="btnNuevoCurso" contentDisplay="TOP" mnemonicParsing="false" styleClass="agregar" text="Agregar Curso" />
          </children>
       </VBox>
    </right>
