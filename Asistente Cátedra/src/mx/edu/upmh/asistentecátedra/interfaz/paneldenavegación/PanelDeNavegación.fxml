@@ -6,7 +6,7 @@
 
 <HBox fx:id="panelDeNavegacion" alignment="CENTER_LEFT" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.upmh.asistentecátedra.interfaz.paneldenavegación.PanelDeNavegación">
    <children>
-      <Button id="btnInicio" fx:id="btnInicio" contentDisplay="TOP" mnemonicParsing="false" onAction="#irInicio"  text="Inicio" textAlignment="CENTER" />
+      <Button id="btnInicio" fx:id="btnInicio" contentDisplay="TOP" mnemonicParsing="false" text="Inicio" textAlignment="CENTER" />
       <ToolBar fx:id="panelRuta" />
    </children>
 </HBox>

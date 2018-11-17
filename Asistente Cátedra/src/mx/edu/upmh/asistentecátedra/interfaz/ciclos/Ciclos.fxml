@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.upmh.asistentecátedra.interfaz.ciclos.SecciónCiclos">
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.upmh.asistentecátedra.interfaz.ciclos.SecciónCiclos">
    <center>
       <VBox fx:id="panelCiclos" alignment="CENTER" minHeight="150.0" minWidth="450.0" BorderPane.alignment="CENTER" />
    </center>

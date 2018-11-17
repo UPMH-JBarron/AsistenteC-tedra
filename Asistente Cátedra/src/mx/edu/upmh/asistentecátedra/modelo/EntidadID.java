@@ -1,14 +1,16 @@
 package mx.edu.upmh.asistentecátedra.modelo;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public abstract class EntidadID {
 	/*----------------------------------------------------------------
 	* ATRIBUTOS
 	* ---------------------------------------------------------------*/
-	private IntegerProperty id;
-	private StringProperty notas;
+	private IntegerProperty id	= new SimpleIntegerProperty();
+	private StringProperty notas	= new SimpleStringProperty();
 	
 	/*----------------------------------------------------------------
 	 * CONSTRUCTORES

@@ -4,19 +4,26 @@
 package mx.edu.upmh.asistentecátedra.interfaz.paneldenavegación;
 
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToolBar;
+import mx.edu.upmh.asistentecátedra.AsistenteCátedra;
+import mx.edu.upmh.asistentecátedra.AsistenteCátedra.SECCIÓN;
 import mx.edu.upmh.asistentecátedra.modelo.Ciclo;
+import mx.edu.upmh.asistentecátedra.modelo.Curso;
 
 
 /**
  * @author jbarron
  *
  */
-public class PanelDeNavegación {
+public class PanelDeNavegación implements EventHandler<ActionEvent>{
 	/*----------------------------------------------------------------
 	* ATRIBUTOS
 	* ---------------------------------------------------------------*/
@@ -25,12 +32,27 @@ public class PanelDeNavegación {
 	@FXML private Button btnInicio;
 	@FXML private ToolBar panelRuta;
 	
+	
+	private Button	btnCiclo;
+	private Button	btnCurso;
+
+	
+	
 	/*----------------------------------------------------------------
 	 * CONSTRUCTORES
 	 * ---------------------------------------------------------------*/
-	public PanelDeNavegación() {
-		this.btnInicio = new Button("Inicio");
-		this.btnInicio.setId("btnInicio");
+	@FXML
+	public void initialize() {
+		
+		this.btnInicio.setOnAction(this);
+		
+		this.btnCiclo	= new Button( "Ciclo" );
+		this.btnCiclo.setOnAction(this);
+		this.btnCurso	= new Button("Curso");
+		this.btnCurso.setOnAction(this);
+
+		
+		 
 	}
 		
 	/*----------------------------------------------------------------
@@ -38,23 +60,51 @@ public class PanelDeNavegación {
 	 * ---------------------------------------------------------------*/
 	
 	
-	private void construirRuta( ) {
-		if( this.objDestino == null ) {
-			return;
-		}
-		if( Ciclo.class.isAssignableFrom(this.objDestino.getClass()) ) {
-			// TODO Mostrar información del ciclo
-			Node nodoDestino = new Button( this.objDestino.toString() );
-			nodoDestino.getStyleClass().add("NodoRuta");
-			this.panelRuta.getItems().add( nodoDestino );
+	private void construirRuta( SECCIÓN sección, Object datos ) {
+		
+		this.panelRuta.getItems().clear();
+		ArrayList<Node> nodosRuta = new ArrayList<>();
+		switch( sección ) {
+		case LISTA:
+			// Botón del curso
+			Curso curso = (Curso) datos;
+			this.btnCurso.setText(curso.getNombre());
+			nodosRuta.add(btnCurso);
+			datos = curso.getCiclo();
+		case CURSOS:
+			// Botón del ciclo
+			Ciclo ciclo = (Ciclo) datos;
+			this.btnCiclo.setText(ciclo.toString());
+			this.btnCiclo.setUserData(ciclo);
+			nodosRuta.add( this.btnCiclo);
+			break;
+		
+		case CICLOS:
+		default:
 			
+		}
+		Collections.reverse(nodosRuta);
+		this.panelRuta.getItems().addAll(nodosRuta);
+	}
+	
+	public Object getDestino( ) {
+		return this.objDestino;
+	}
+	
+	
+	
+	@Override
+	public void handle(ActionEvent event) {
+		
+		if( event.getSource() == this.btnInicio  ) {
+			AsistenteCátedra.getInstancia().setSección(SECCIÓN.CICLOS);
+		}else if( event.getSource() == btnCiclo ) {
+			System.out.println(this.btnCiclo.getUserData().toString());
+			AsistenteCátedra.getInstancia().setSección(SECCIÓN.CURSOS, this.btnCiclo.getUserData());
 		}
 		
 	}
-	@FXML
-	private void irInicio( ActionEvent e ) {
-		System.out.println("Ir al inicio");
-	}
+
 	
 	
 	/**
@@ -62,9 +112,9 @@ public class PanelDeNavegación {
 	 * @param objDestino Objeto de información al que se desea mostrar la ruta.
 	 */
 	
-	public void setDestino( Object objDestino ) {
+	public void setDestino( SECCIÓN sección, Object objDestino ) {
 		this.objDestino = objDestino;
-		this.construirRuta( );
+		this.construirRuta( sección, objDestino );
 	}
 	
 	

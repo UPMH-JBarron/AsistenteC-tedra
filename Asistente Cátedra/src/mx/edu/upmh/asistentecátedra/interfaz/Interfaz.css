@@ -54,7 +54,7 @@ SELECTORES DE CLASE
 
 .selectorCiclo{
 	-fx-font:			24px "Sans";
-	-fx-font-weight:	bolder;
+	-fx-font-weight: 	bolder;
 	-fx-text-fill:		#B0C4D3;
 }
 .selectorCiclo> .lblAno{
@@ -74,8 +74,30 @@ SELECTORES DE CLASE
 	-fx-font:			18px "Sans";
 }
 
+.MiniaturaCurso{
+	-fx-background-color: #3E4958;
+}
 
 
+.MiniaturaCurso #lblNombre{
+	-fx-text-fill: 	whitesmoke;
+	-fx-font-weight: bolder;
+	-fx-font-size:	150%;
+}
+
+.MiniaturaCurso #lblAlumnos{
+	-fx-graphic: url(./recursos/Alumnos.png);
+	-fx-content-display: top;	
+}
+.MiniaturaCurso #lblSesiones{
+	-fx-graphic: url(./recursos/Sesiones.png);
+	-fx-content-display: top;	
+}
+
+.MiniaturaCurso #lblActividades{
+	-fx-graphic: url(./recursos/Actividades.png);
+	-fx-content-display: top;	
+}
 
 /*--------------------------------------------------------------
 SELECTORES DE ID
@@ -84,7 +106,7 @@ SELECTORES DE ID
 
 #panelDeNavegacion{
 	-fx-background-color:	#3E4958;
-	-fx-padding: 0 0 10px 15px;
+	-fx-padding: 			0 0 10px 15px;
 }
 
 #btnInicio{
@@ -106,4 +128,9 @@ SELECTORES DE ID
 	-fx-graphic-text-gap: 	15px;
 	-fx-graphic: 	url(./recursos/Separador.png);
 	-fx-font-size:	16px;
+}
+
+#panelCursos{
+	-fx-hgap: 		15px;
+	-fx-vgap:		15px;
 }

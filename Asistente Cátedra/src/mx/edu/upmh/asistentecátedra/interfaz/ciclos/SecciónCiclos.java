@@ -72,10 +72,7 @@ public class SecciónCiclos extends Sección implements EventHandler<ActionEvent
 		this.escaneoFinalizado();
 	}
 	
-	@Override
-	protected String getRutaFXML() {
-		return "interfaz/ciclos/Ciclos.fxml";
-	}
+
 
 	private void escaneoFinalizado( ) {
 		// Ordenar ciclos de forma descendente
@@ -105,8 +102,7 @@ public class SecciónCiclos extends Sección implements EventHandler<ActionEvent
 	@FXML
 	public void initialize( ) {
 		// TODO Iniciar tarea asíncrona para buscar ciclos en el directorio
-		//DEBUG
-		System.out.println( "Ciclos Initialize" );
+		//DEBUG	System.out.println( "Ciclos Initialize" );
 		this.iniciarEscaneo();
 	}
 }

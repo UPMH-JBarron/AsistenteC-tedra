@@ -20,40 +20,16 @@ public abstract class Sección  {
 	/*----------------------------------------------------------------
 	* ATRIBUTOS
 	* ---------------------------------------------------------------*/
+	private Object datos;
 	
 	/*----------------------------------------------------------------
 	 * MÉTODOS
 	 * ---------------------------------------------------------------*/
-	protected abstract String getRutaFXML( );
-	
-	public void configurar( BorderPane contenedor, Object datos ) {
-		URL urlFXML = getClass().getResource(AsistenteCátedra.RAÍZ_PROYECTO + this.getRutaFXML() );
-		//DEBUG 
-		System.out.println( "URL:" + urlFXML.toString() );
-		
-		FXMLLoader cargadorFXML = new FXMLLoader(urlFXML);
-		Parent raízContenido = null;
-		
-		try {
-			 raízContenido	= (Parent) cargadorFXML.load();
-			 raízContenido.getStylesheets().clear();
-			 raízContenido.getStylesheets().add( AsistenteCátedra.CSS_ARCHIVO );
-		}catch (IOException e) {
-			raízContenido = new Label("Error al cargar el archivo FXML de "+this.getClass().getSimpleName() );
-			e.printStackTrace();
-		}finally {
-			//DEBUG
-			System.out.println( "Agregar al centro" );
-			contenedor.setCenter(raízContenido);
-		}
-		
+	public final void setDatos(Object datos) {
+		this.datos = datos;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+	protected final Object getDatos() {
+		return this.datos;
+	}
 }

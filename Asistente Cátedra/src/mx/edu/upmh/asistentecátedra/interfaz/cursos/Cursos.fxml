@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="seccionCursos" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.upmh.asistentecátedra.interfaz.cursos.Cursos">
    <center>
-      <FlowPane fx:id="panelCursos" minHeight="64.0" minWidth="64.0" BorderPane.alignment="CENTER" />
+      <FlowPane fx:id="panelCursos" alignment="CENTER" columnHalignment="CENTER" minHeight="64.0" minWidth="64.0" BorderPane.alignment="CENTER" />
    </center>
    <right>
       <VBox styleClass="panelLateral" BorderPane.alignment="CENTER">

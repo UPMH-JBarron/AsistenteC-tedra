@@ -8,6 +8,9 @@
 	<top>
 		<fx:include fx:id="panelDeNavegación" source="/mx/edu/upmh/asistentecátedra/interfaz/paneldenavegación/PanelDeNavegación.fxml" />
 	</top>
+	<center>
+		<fx:include fx:id="seccionCiclos" source="/mx/edu/upmh/asistentecátedra/interfaz/ciclos/Ciclos.fxml" />
+	</center>
    <bottom>
       <Label text="Panel Principal" BorderPane.alignment="CENTER" />
    </bottom>
